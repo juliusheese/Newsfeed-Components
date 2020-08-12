@@ -147,8 +147,9 @@ function articleMaker(artinfo) {
     art.appendChild(p2).textContent = artinfo.secondParagraph;
     art.appendChild(p3).textContent = artinfo.thirdParagraph;
     art.appendChild(b);
+    b.textContent = '+';
     b.addEventListener('click', (e) => {
-        e.art.classList.toggle("article-open");
+        e.target.parentNode.classList.toggle("article-open");
     });
     return art;
 }
